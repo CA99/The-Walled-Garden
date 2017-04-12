@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>The Walled Garden</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="lib/babylon.2.3.js"></script>
+	<script src="lib/pep.js"></script>
+	<script src="lib/oimo.min.js"></script>
+	<!--<script src="js/gui.js"></script>-->
+</head>
+<body>
+	<canvas id="renderCanvas"></canvas>
+	<div id="overlay">
+		<div id="menu-page" class="menu-page">
+			<div class="menu-block l1" id="main-menu">
+				<h1>The Walled Garden</h1>
+				<h2>Main Menu</h2>
+				<ul>
+					<li><span id="btn-new">Play</span></li>
+					<li><span id="btn-continue" class="disabled hidden">Continue</span></li>
+					<li><span id="btn-select" class="disabled hidden">Select</span></li>
+					<li><span id="btn-settings">Settings</span></li>
+					<li><span id="btn-quit">Quit</span></li>
+				</ul>
+			</div>
+			<div class="menu-block l1" id="pause">
+				<h2>Paused</h2>
+				<ul>
+					<li><span id="btn-resume">Resume</span></li>
+					<li><span id="btn-settings-ingame">Settings</span></li>
+					<li><span id="btn-restart-ingame" class="btn-restart">Restart</span></li>
+					<li><span id="btn-paused-exit" class="btn-exit">Exit</span></li>
+				</ul>
+			</div>
+			<div class="menu-block l2" id="confirm">
+				<h2>Confirm Restart?</h2>
+				<ul>
+					<li><span id="btn-confirm-yes">Yes</span></li>
+					<li><span id="btn-confirm-no">No</span></li>
+				</ul>
+			</div>
+			<div class="menu-block l2" id="select">
+				<h2>Select</h2>
+				<ul>
+					<li><span id="btn-l2a-back" class="btn-back">Back</span></li>
+					<li><span id="btn-lvl1">Level 1</span></li>
+					<li><span id="btn-lvl2">Level 2</span></li>
+					<li><span id="btn-lvl3">Level 3</span></li>
+				</ul>
+			</div>
+			<div class="menu-block l2" id="settings">
+				<h2>Settings</h2>
+				<ul>
+					<li><span id="btn-l2b-back" class="btn-back">Back</span></li>
+					<li><span id="btn-setting-mouse-look-sens">Mouse Look Sensitivity: <span id="mouse-sens"></span></span></li>
+					<li><span id="btn-setting-gamepad-look-sens">Gamepad Look Sensitivity: <span id="gamepad-sens"></span></span></li>
+					<li><span id="btn-setting-difficulty">Difficulty: <span id="difficulty"></span></span></li>
+					<!--<li><span id="btn-setting-gpd-invert-y" class="disabled">Gamepad Invert Y: <span id="gpd-inv-y"></span></span></li>-->
+				</ul>
+			</div>
+			<div class="menu-block l1" id="game-next">
+				<h2>Level Cleared!</h2>
+				<ul>
+					<li><span id="btn-next">Next</span></li>
+					<li><span id="btn-retry">Retry</span></li>
+					<li><span id="btn-game-next-exit" class="btn-exit">Exit</span></li>
+				</ul>
+			</div>
+			<div class="menu-block l1" id="game-complete">
+				<h2>Game Completed!</h2>
+				<ul>
+					<li><span id="btn-game-complete-exit" class="btn-exit">Main Menu</span></li>
+					<!--<li><span id="btn-restart-game-complete" class="btn-restart">Restart</span></li>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="js/game.js"></script>
+	<script src="js/loadScene.js"></script>
+	<script src="js/overlay.js"></script>
+	<script src="js/startup.js"></script>
+</body>
+
+</html>
